@@ -89,11 +89,11 @@ $form.inputNumber.addEventListener("keydown", (e) => {
 });
 
 $form.inputName.addEventListener("keyup", (e) => {
-  $cardName.textContent = $form.inputName.value;
-  $firm.textContent = $form.inputName.value;
-  if ($cardName.textContent == "") {
-    $cardName.textContent = "FACUNDO AQUINO";
-  }
+  $cardName.textContent = $form.inputName.value || "FACUNDO AQUINO";
+  $firm.textContent = $form.inputName.value ;
+  // if ($cardName.textContent == "") {
+  //   $cardName.textContent = "FACUNDO AQUINO";
+  // }
   lookFrontal();
   // console.log(e);
 });
